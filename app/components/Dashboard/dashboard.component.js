@@ -12,23 +12,14 @@ var core_1 = require('@angular/core');
 var DashboardComponent = (function () {
     function DashboardComponent() {
     }
-    DashboardComponent.prototype.onClick = function () {
-        alert('asdasd');
-    };
     DashboardComponent = __decorate([
         core_1.Component({
-            selector: 'DashboardComponent',
-            templateUrl: 'app/components/Dashboard/dashboard.html'
+            selector: 'my-app',
+            templateUrl: 'app/components/Dashboard/dashboard.template.html'
         }), 
         __metadata('design:paramtypes', [])
     ], DashboardComponent);
     return DashboardComponent;
 }());
 exports.DashboardComponent = DashboardComponent;
-var appRoutes = [
-    {
-        path: 'dashboard',
-        component: DashboardComponent
-    }
-];
 //# sourceMappingURL=dashboard.component.js.map

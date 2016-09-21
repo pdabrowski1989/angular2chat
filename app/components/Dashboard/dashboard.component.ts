@@ -2,19 +2,8 @@ import { Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 @Component({
-    selector: 'DashboardComponent',
-    templateUrl: 'app/components/Dashboard/dashboard.html'
+    selector: 'my-app',
+    templateUrl: 'app/components/Dashboard/dashboard.template.html'
 })
 
-export class DashboardComponent {
-    onClick() {
-        alert('asdasd')
-    }
-}
-
-const appRoutes: Routes = [
-    {
-        path: 'dashboard',
-        component: DashboardComponent
-    }
-];
+export class DashboardComponent {}

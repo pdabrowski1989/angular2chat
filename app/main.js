@@ -2,9 +2,5 @@
 var platform_browser_dynamic_1 = require('@angular/platform-browser-dynamic');
 var app_module_1 = require('./app.module');
 var platform = platform_browser_dynamic_1.platformBrowserDynamic();
-this.a = function () {
-    console.log('angular');
-};
-this.a();
-platform.bootstrapModule(app_module_1.AppModule);
+platform.bootstrapModule(app_module_1.Chat);
 //# sourceMappingURL=main.js.map

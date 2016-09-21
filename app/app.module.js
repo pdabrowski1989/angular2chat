@@ -10,19 +10,28 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
-var Dashboard_1 = require('./components/Dashboard/Dashboard');
-var AppModule = (function () {
-    function AppModule() {
+// Routes
+var app_routes_1 = require('./app.routes');
+// Component
+var main_component_1 = require('./components/Main/main.component');
+var dashboard_component_1 = require('./components/Dashboard/dashboard.component');
+var Chat = (function () {
+    function Chat() {
     }
-    AppModule = __decorate([
+    Chat = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule],
-            declarations: [Dashboard_1.DashboardComponent],
-            bootstrap: [Dashboard_1.DashboardComponent]
+            imports: [
+                platform_browser_1.BrowserModule,
+                app_routes_1.routes
+            ],
+            declarations: [
+                dashboard_component_1.DashboardComponent,
+                main_component_1.MainComponent
+            ]
         }), 
         __metadata('design:paramtypes', [])
-    ], AppModule);
-    return AppModule;
+    ], Chat);
+    return Chat;
 }());
-exports.AppModule = AppModule;
+exports.Chat = Chat;
 //# sourceMappingURL=app.module.js.map
