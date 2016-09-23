@@ -5,7 +5,8 @@ import {BrowserModule} from '@angular/platform-browser';
 import {routes} from './app.routes';
 
 // Component
-import {MainComponent} from './components/Main/main.component';
+import {AppComponent} from './app.component';
+import {NavigationComponent} from './components/Navigation/navigation.component';
 import {DashboardComponent} from './components/Dashboard/dashboard.component';
 
 @NgModule({
@@ -14,9 +15,13 @@ import {DashboardComponent} from './components/Dashboard/dashboard.component';
         routes
     ],
     declarations: [
+        AppComponent,
         DashboardComponent,
-        MainComponent
+        NavigationComponent
+    ],
+    bootstrap: [
+        AppComponent
     ]
 })
 
-export class Chat {}
+export class AppModule {}

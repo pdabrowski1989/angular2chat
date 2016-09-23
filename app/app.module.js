@@ -13,25 +13,30 @@ var platform_browser_1 = require('@angular/platform-browser');
 // Routes
 var app_routes_1 = require('./app.routes');
 // Component
-var main_component_1 = require('./components/Main/main.component');
+var app_component_1 = require('./app.component');
+var navigation_component_1 = require('./components/Navigation/navigation.component');
 var dashboard_component_1 = require('./components/Dashboard/dashboard.component');
-var Chat = (function () {
-    function Chat() {
+var AppModule = (function () {
+    function AppModule() {
     }
-    Chat = __decorate([
+    AppModule = __decorate([
         core_1.NgModule({
             imports: [
                 platform_browser_1.BrowserModule,
                 app_routes_1.routes
             ],
             declarations: [
+                app_component_1.AppComponent,
                 dashboard_component_1.DashboardComponent,
-                main_component_1.MainComponent
+                navigation_component_1.NavigationComponent
+            ],
+            bootstrap: [
+                app_component_1.AppComponent
             ]
         }), 
         __metadata('design:paramtypes', [])
-    ], Chat);
-    return Chat;
+    ], AppModule);
+    return AppModule;
 }());
-exports.Chat = Chat;
+exports.AppModule = AppModule;
 //# sourceMappingURL=app.module.js.map
