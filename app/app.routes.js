@@ -1,31 +1,42 @@
 "use strict";
 var router_1 = require('@angular/router');
 // Components
-var logIn_component_1 = require('./components/LogIn/logIn.component');
-var createUser_component_1 = require('./components/LogIn/CreateUser/createUser.component');
+var authorization_component_1 = require('./components/Authorization/authorization.component');
+var logIn_component_1 = require('./components/Authorization/LogIn/logIn.component');
+var createUser_component_1 = require('./components/Authorization/CreateUser/createUser.component');
 var dashboard_component_1 = require('./components/Dashboard/dashboard.component');
 var config_component_1 = require('./components/Config/config.component');
 // Routes
 var appRoutes = [
     {
         path: '',
-        redirectTo: '/dashboard',
+        redirectTo: 'authorization/login',
         pathMatch: 'full'
     },
     {
-        path: '/login',
-        component: logIn_component_1.LogInComponent
+        path: 'authorization',
+        component: authorization_component_1.AuthorizationComponent,
+        children: [
+            {
+                path: '',
+                redirectTo: 'login',
+            },
+            {
+                path: 'login',
+                component: logIn_component_1.LogInComponent
+            },
+            {
+                path: 'createUser',
+                component: createUser_component_1.CreateUserComponent
+            }
+        ]
     },
     {
         path: 'dashboard',
-        component: createUser_component_1.CreateUserComponent
-    },
-    {
-        path: '/dashboard',
         component: dashboard_component_1.DashboardComponent
     },
     {
-        path: '/config',
+        path: 'config',
         component: config_component_1.ConfigComponent
     }
 ];

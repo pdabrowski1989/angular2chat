@@ -15,7 +15,13 @@ var app_routes_1 = require('./app.routes');
 // Component
 var app_component_1 = require('./app.component');
 var navigation_component_1 = require('./components/Navigation/navigation.component');
+var authorization_component_1 = require('./components/Authorization/authorization.component');
+var logIn_component_1 = require('./components/Authorization/LogIn/logIn.component');
+var createUser_component_1 = require('./components/Authorization/CreateUser/createUser.component');
 var dashboard_component_1 = require('./components/Dashboard/dashboard.component');
+var messagePanel_component_1 = require('./components/Dashboard/MessagePanel/messagePanel.component');
+var FriendsPanel_component_1 = require('./components/Dashboard/FriendsPanel/FriendsPanel.component');
+var config_component_1 = require('./components/Config/config.component');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -27,8 +33,14 @@ var AppModule = (function () {
             ],
             declarations: [
                 app_component_1.AppComponent,
+                navigation_component_1.NavigationComponent,
+                authorization_component_1.AuthorizationComponent,
+                logIn_component_1.LogInComponent,
                 dashboard_component_1.DashboardComponent,
-                navigation_component_1.NavigationComponent
+                createUser_component_1.CreateUserComponent,
+                config_component_1.ConfigComponent,
+                messagePanel_component_1.MessagePanelComponent,
+                FriendsPanel_component_1.FriendsPanelComponent
             ],
             bootstrap: [
                 app_component_1.AppComponent

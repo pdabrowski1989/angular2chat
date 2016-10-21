@@ -3,8 +3,9 @@ import {ModuleWithProviders} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 
 // Components
-import {LogInComponent} from './components/LogIn/logIn.component';
-import {CreateUserComponent} from './components/LogIn/CreateUser/createUser.component';
+import {AuthorizationComponent} from './components/Authorization/authorization.component';
+import {LogInComponent} from './components/Authorization/LogIn/logIn.component';
+import {CreateUserComponent} from './components/Authorization/CreateUser/createUser.component';
 import {DashboardComponent} from './components/Dashboard/dashboard.component';
 import {ConfigComponent} from './components/Config/config.component';
 
@@ -12,23 +13,33 @@ import {ConfigComponent} from './components/Config/config.component';
 const appRoutes: Routes = [
     {
         path: '',
-        redirectTo: '/dashboard',
+        redirectTo: 'authorization/login',
         pathMatch: 'full'
     },
     {
-        path: '/login',
-        component: LogInComponent
+        path: 'authorization',
+        component: AuthorizationComponent,
+        children: [
+            {
+                path: '',
+                redirectTo: 'login',
+            },
+            {
+                path: 'login',
+                component: LogInComponent
+            },
+            {
+                path: 'createUser',
+                component: CreateUserComponent
+            }
+        ]
     },
     {
         path: 'dashboard',
-        component: CreateUserComponent
-    },
-    {
-        path: '/dashboard',
         component: DashboardComponent
     },
     {
-        path: '/config',
+        path: 'config',
         component: ConfigComponent
     }
 ];
